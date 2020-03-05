@@ -231,6 +231,7 @@ public class TencentRtcPlugin implements FlutterPlugin, MethodCallHandler {
         trtcParams.userId = TencentRtcPluginUtil.getParam(call, result, "userId");
         trtcParams.userSig = TencentRtcPluginUtil.getParam(call, result, "userSig");
         trtcParams.roomId = TencentRtcPluginUtil.getParam(call, result, "roomId");
+        trtcParams.privateMapKey = TencentRtcPluginUtil.getParam(call, result, "roomSig");
         int scene = TencentRtcPluginUtil.getParam(call, result, "scene");
         Integer role = call.argument("role");
         if (role != null) {
