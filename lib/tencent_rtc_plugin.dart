@@ -48,11 +48,12 @@ class TencentRtcPlugin {
     });
   }
 
-  /// 加入房间(默认开启音频接收)
+   /// 加入房间(默认开启音频接收)
   static Future<void> enterRoom({
     @required int appid, // appid
     @required String userId, // 用户id
     @required String userSig, // 用户签名
+    @required String roomSig,
     @required int roomId, // 房间号
     @required int scene, // 应用场景，目前支持视频通话（VideoCall）和在线直播（Live）两种场景。
     int role, // 角色
@@ -62,6 +63,7 @@ class TencentRtcPlugin {
       "userId": userId,
       "userSig": userSig,
       "roomId": roomId,
+      "roomSig": roomSig,
       "scene": scene,
       "role": role,
     });
