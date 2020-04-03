@@ -193,6 +193,7 @@ public class SwiftTencentRtcPlugin: NSObject, FlutterPlugin,TRTCCloudDelegate {
             let userId = CommonUtils.getParam(call: call, result: result, param: "userId")  as? String,
             let userSig = CommonUtils.getParam(call: call, result: result, param: "userSig")  as? String,
             let roomId = CommonUtils.getParam(call: call, result: result, param: "roomId")  as? UInt32,
+            let roomSig = CommonUtils.getParam(call: call, result: result, param: "roomSig")  as? String,
             let scene = CommonUtils.getParam(call: call, result: result, param: "scene")  as? Int
         {
             let params = TRTCParams();
@@ -200,6 +201,7 @@ public class SwiftTencentRtcPlugin: NSObject, FlutterPlugin,TRTCCloudDelegate {
             params.userId = userId;
             params.userSig = userSig;
             params.roomId = roomId;
+            params.roomSig=roomSig;
             if role != nil{
                 params.role = TRTCRoleType(rawValue: role!)!;
             }
