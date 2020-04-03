@@ -201,7 +201,7 @@ public class SwiftTencentRtcPlugin: NSObject, FlutterPlugin,TRTCCloudDelegate {
             params.userId = userId;
             params.userSig = userSig;
             params.roomId = roomId;
-            params.roomSig=roomSig;
+            params.privateMapKey=roomSig;
             if role != nil{
                 params.role = TRTCRoleType(rawValue: role!)!;
             }
